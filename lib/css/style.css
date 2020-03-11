@@ -1,0 +1,52 @@
+/*------------------------------------
+header
+------------------------------------*/
+#header {
+  width: 100%;
+  margin: 0;
+  padding: 0 2rem;
+  position: fixed;
+  top: 0;
+  margin: 1rem 0
+}
+
+#header .logo-wrap {
+  float: left;
+  width: 134px;
+  height: 56px
+}
+
+#header .logo-wrap img {
+  width: 100%;
+}
+
+#header ul {
+  float: right;
+  margin-top: 1.3rem
+}
+
+#header ul li {
+  display: inline-block;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  padding: 0 1rem;
+  border-right: 1px solid #D1D1D1
+}
+
+#header ul li:last-child {
+  border: none
+}
+
+#header ul li span {
+  font-size: 13px;
+  color: #14A79C;
+  display: block;
+  font-weight: bold;
+}
+
+#header .btn_fix {
+  position: fixed;
+  right: 0;
+  top: calc(50% - 40px)
+}
