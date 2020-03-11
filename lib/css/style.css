@@ -45,13 +45,21 @@ header
   font-weight: bold;
 }
 
+/*---固定ボタン---*/
+
 #header .btn_fix {
   position: fixed;
   right: 0;
   top: calc(50% - 40px)
 }
 
-#header .btn_fix img {
+#header .btn_top {
+  position: fixed;
+  right: 1rem;
+  bottom: 2rem
+}
+
+#header .btn_fix img, #header .btn_top img {
   width: 100%
 }
 
@@ -73,4 +81,28 @@ header
 
 .drawer-hamburger:hover {
   background: #14A79C;
+}
+
+/*------------------------------------
+footer
+------------------------------------*/
+#footer {
+  background: #000;
+  text-align: right;
+  padding: 3rem 0
+}
+
+#footer ul li  {
+  display: inline-block;
+}
+
+#footer ul li a {
+  padding: 0;
+  display: block;
+  margin: 0 10px;
+  color: #fff!important
+}
+
+#footer small {
+  color: #fff
 }

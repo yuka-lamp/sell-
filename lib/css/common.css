@@ -45,6 +45,10 @@ a:hover {
   text-decoration: none !important;
 }
 
+ul {
+  list-style: none;
+}
+
 ul li a {
   color: #000!important
 }
@@ -56,6 +60,10 @@ ul li a:hover img {
 
 li>a {
   display: block;
+}
+
+div.img-wrap>img {
+  width: 100%;
 }
 
 /*------------------------------------------------------

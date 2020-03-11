@@ -44,7 +44,7 @@ $wp_url = get_template_directory_uri(); ?>
     </a>
   </div>
   <div class="btn_top">
-    <a href="<?php echo $home; ?>#form">
+    <a href="<?php echo $home; ?>#header">
     <img src="<?php echo $wp_url; ?>/lib/images/btn_top.png" alt="トップへ戻る">
     </a>
   </div>

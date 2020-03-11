@@ -5,10 +5,14 @@ $wp_url = get_template_directory_uri(); ?>
 <!-- メインコンテンツ終了 -->
 
 <!-- フッター -->
-<footer class="py-4 bg-dark text-white">
-  <div class="container">
-    <small class="d-block">©2019 .inc</small>
-  </div>
+<footer id="footer" class="">
+    <div class="wrap">
+      <ul>
+        <li><a class="https://garnet-estate.com/" target="_blank">運営会社</a></li>
+        <li><a class="drawer-menu-item" href="<?php echo $home; ?>">プライバシーポリシー</a></li>
+      </ul>
+      <small class="d-block">Copyright© GARNET Co., Ltd. All Rights Reserved.</small>
+    </div>
 </footer>
 <!-- フッター終了 -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
