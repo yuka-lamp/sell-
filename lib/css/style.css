@@ -50,3 +50,27 @@ header
   right: 0;
   top: calc(50% - 40px)
 }
+
+#header .btn_fix img {
+  width: 100%
+}
+
+@media(max-width:768px) {
+  #header .btn_fix {
+    width: 60px
+  }
+}
+
+/*---ハンバーガーメニュー---*/
+
+.drawer-hamburger-icon, .drawer-hamburger-icon:after, .drawer-hamburger-icon:before {
+  background-color: #fff;
+}
+
+.drawer-hamburger {
+  background: #14A79C;
+}
+
+.drawer-hamburger:hover {
+  background: #14A79C;
+}

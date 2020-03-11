@@ -12,7 +12,9 @@ $wp_url = get_template_directory_uri(); ?>
 </footer>
 <!-- フッター終了 -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-<script src="<?php echo $wp_url; ?>/lib/js/jquery.fatNav.min.js"></script>
+<script src="<?php echo $wp_url ?>/lib/js/iscroll.js"></script>
+<script src="<?php echo $wp_url ?>/lib/js/drawer.min.js"></script>
+<script src="<?php echo $wp_url ?>/lib/js/app.js"></script>
 <?php wp_footer(); ?>
 </body>
 </html>
