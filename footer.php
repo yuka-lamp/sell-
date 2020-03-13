@@ -9,7 +9,20 @@ $wp_url = get_template_directory_uri(); ?>
     <div class="wrap">
       <ul>
         <li><a class="https://garnet-estate.com/" target="_blank">運営会社</a></li>
-        <li><a class="drawer-menu-item" href="<?php echo $home; ?>">プライバシーポリシー</a></li>
+        <li>
+          <div class="modal-content">
+            <a class="js-modal-open" href="">プライバシーポリシー</a>
+          </div>
+          <div class="modal js-modal">
+            <div class="modal__bg js-modal-close"></div>
+            <div class="modal__content">
+              <?php include('privacy-policy.php'); ?>
+              <a class="js-modal-close mt-1" href="">✕</a>
+            </div>
+          </div>
+          <a class="drawer-menu-item" href="<?php echo $home; ?>">
+          </a>
+        </li>
       </ul>
       <small class="d-block">Copyright© GARNET Co., Ltd. All Rights Reserved.</small>
     </div>

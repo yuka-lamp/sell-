@@ -8,9 +8,11 @@ $wp_url = get_template_directory_uri(); ?>
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="<?php echo $wp_url ?>/lib/css/drawer.min.css">
+<link rel="stylesheet" href="<?php echo $wp_url ?>/lib/css/modal.css">
 <link rel="stylesheet" href="<?php echo $wp_url ?>/lib/css/common.css">
 <link rel="stylesheet" href="<?php echo $wp_url ?>/lib/css/headerfooter.css">
 <link rel="stylesheet" href="<?php echo $wp_url ?>/lib/css/style.css">
+<link rel="stylesheet" href="<?php echo $wp_url ?>/lib/css/readmore.css">
 <?php wp_head(); ?>
 <?php if (!is_user_logged_in()): ?>
 <!-- ここにGAトラッキングタグ -->

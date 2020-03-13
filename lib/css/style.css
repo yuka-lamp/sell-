@@ -337,12 +337,15 @@ SELL+があなたの物件を最大価値にします
     width: 100%;
     margin-top: 1rem
   }
-  #sec-04 .txt-wrap h3,#sec-04 .txt-wrap p  {
+
+  #sec-04 .txt-wrap h3, #sec-04 .txt-wrap p {
     padding: 1.5rem
   }
+
   #sec-04 .txt-wrap h3 br {
     display: none;
   }
+
   #sec-04 .txt-wrap::after {
     opacity: .5
   }
@@ -351,14 +354,254 @@ SELL+があなたの物件を最大価値にします
 /*------------------------------------
 SELL+の実績
 ------------------------------------*/
+#sec-05 {}
+
+@media(max-width:768px) {}
+
+/*------------------------------------
+お客様の声
+------------------------------------*/
+#sec-06 {}
+
 @media(max-width:768px) {}
 
 /*------------------------------------
 3STEPで簡単！速い！
 ------------------------------------*/
+#sec-07 .ttl-wrap {
+  padding-bottom: 2rem
+}
+
+#sec-07 ul {
+  margin: 0 !important;
+  padding: 0 !important
+}
+
 @media(max-width:768px) {}
 
 /*------------------------------------
-SELL+が選ばれる理由
+よくあるご質問
 ------------------------------------*/
+#sec-08 {
+  background: #14A79C;
+}
+
+#sec-8 dl {
+  background: #fff;
+  border: 3px solid #000;
+}
+
+#sec-8 dl dt {
+  margin: 1rem;
+  font-weight: bold;
+  font-size: 1.2rem
+}
+
+#sec-8 dl dt::before {
+  content: url('../images/08_icon_q.png');
+  margin: 0 1rem 0 0
+}
+
+#sec-8 dl dd {
+  margin: 1rem 0 0 0
+}
+
 @media(max-width:768px) {}
+
+/*------------------------------------
+メッセージ
+------------------------------------*/
+#sec-09 .m-wrap {
+  background: #F7FEEF;
+  border: 3px solid #000;
+  position: relative;
+  padding: 3rem;
+  border-radius: 20px;
+  margin-top: 5rem
+}
+
+#sec-09 .m-wrap::before {
+  content: '';
+  background-image: url('../images/09_kazari.png');
+  background-size: cover;
+  position: absolute;
+  width: 587px;
+  height: 90px;
+  top: -5rem;
+  left: calc(50% - 292px);
+  z-index: -1;
+}
+
+#sec-09 .m-wrap::after {
+  content: '';
+  background-image: url('../images/09_staff.png');
+  background-size: cover;
+  position: absolute;
+  width: 275px;
+  height: 216px;
+  bottom: -5rem;
+  right: -3rem
+}
+
+#sec-09 .ttl-wrap {
+  padding: 1rem 0
+}
+
+#sec-09 p {
+  margin: 0 auto;
+  width: 80%;
+}
+
+#sec-09 p:last-child {
+  margin: 2rem 0;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+@media(max-width:768px) {
+  #sec-09 .m-wrap {
+    padding: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 5rem
+  }
+
+  #sec-09 .m-wrap::before {
+    width: 300px;
+    height: 30px;
+    top: -2rem;
+    left: calc(50% - 150px);
+  }
+
+  #sec-09 .m-wrap::after {
+    width: 170px !important;
+    height: 130px;
+    bottom: -5rem;
+    left: calc(50% - 85px);
+  }
+
+  #sec-09 p {
+    width: 100%;
+  }
+}
+
+/*------------------------------------
+強化エリア
+------------------------------------*/
+#sec-10 {
+  background: #14A79C;
+}
+
+#sec-10 .content {
+  width: 80%;
+  margin: 2rem auto 0 auto;
+  background: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+  position: relative;
+}
+
+#sec-10 .content::before {
+  content: url('../images/10_staff.png');
+  position: absolute;
+  top: -3rem;
+}
+
+#sec-10 .content p {
+  text-align: center;
+}
+
+#sec-10 .content ul li {
+  background: #FCF76A;
+  border-radius: 10px;
+  border: 3px solid #000;
+  width: 20%;
+}
+
+@media(max-width:768px) {
+  #sec-10 .content {
+    margin-top: 4rem
+  }
+
+  #sec-10 .content p {
+    margin-top: 6rem
+  }
+
+  #sec-10 .content ul li {
+    width: 45%;
+  }
+}
+
+/*------------------------------------
+お問合せフォーム
+------------------------------------*/
+#sec-11 .btn-wrap {
+  width: 70%;
+  margin: 0 auto 3rem auto;
+  display: block;
+}
+
+#sec-11 .btn-wrap a {
+  width: 49%;
+}
+
+#sec-11 .btn-wrap img {
+  width: 100%;
+}
+
+#sec-11 .form-wrap {
+  border: 3px solid #000;
+  padding: 3rem
+}
+
+#sec-11 .form-wrap
+
+@media(max-width:768px) {
+  #sec-11 .btn-wrap {
+    width: 100%;
+  }
+
+  #sec-11 .btn-wrap img {
+    width: 100%;
+  }
+}
+
+/*------------------------------------
+LINEでお問い合わせ
+------------------------------------*/
+#sec-12 {
+  background: #14A79C
+}
+
+#sec-12 .bg {
+  background: #fff;
+  border-radius: 20px;
+}
+
+#sec-12 .flex {
+  width: 70%;
+  margin: 0 auto;
+  align-items: center;
+}
+
+@media(max-width:768px) {
+  #sec-12 .flex {
+    flex-flow: column-reverse;
+    width: 100%;
+    text-align: center;
+    padding: 2rem 2rem 0 2rem;
+    box-sizing: border-box;
+  }
+
+  #sec-12 .txt-wrap, #sec-12 .txt-wrap img {
+    width: 100%;
+  }
+
+  #sec-12 .img-wrap {
+    margin: 2rem auto 0 auto;
+  }
+
+  #sec-12 .img-wrap img {
+    margin: 0 0 0 -2rem
+  }
+}

@@ -172,14 +172,14 @@ get_header(); ?>
               </h4>
               <p><?php the_field( 'p' ); ?></p>
               <table>
-                <tr>
-                  <th>物件の種類</th>
-                  <td><?php the_field( 'type' ); ?></td>
-                </tr>
-                <tr>
-                  <th>物件の種類</th>
-                  <td><?php the_field( 'size' ); ?></td>
-                </tr>
+                <dl>
+                  <dt>物件の種類</dt>
+                  <dd><?php the_field( 'type' ); ?></dd>
+                </dl>
+                <dl>
+                  <dt>物件の種類</dt>
+                  <dd><?php the_field( 'size' ); ?></dd>
+                </dl>
               </table>
             </div>
             <div class="img-wrap">
@@ -190,6 +190,47 @@ get_header(); ?>
     <?php endforeach; ?>
     <?php endif; wp_reset_postdata(); ?>
     </ul>
+    <div class="btn_contact">
+      <a href="#sec-11"><img src="<?php echo $wp_url; ?>/lib/images/btn_contact.png" alt="お問い合わせはこちら"></a>
+    </div>
+  </div>
+</section>
+
+<section id="sec-06">
+  <div class="sec">
+    <div class="wrap">
+      <h2 class="ttl-wrap">
+        <img src="<?php echo $wp_url; ?>/lib/images/07_ttl.png" alt="お客様の声">
+      </h2>
+      <ul>
+        <?php
+        $arg = array(
+          'posts_per_page' => 3,
+          'orderby' => 'date',
+          'order' => 'DESC',
+          'post_type' => 'case',
+        );
+        $posts = get_posts($arg);
+        if ($posts): ?>
+        <?php foreach ($posts as $post): setup_postdata($post);
+        ?>
+        <li>
+          <div class="img-wrap">
+            <img src="<?php the_field( 'img' ); ?>" alt="<?php the_field( 'ttl' ); ?>">
+            <p><?php the_field( 'name' ); ?></p>
+          </div>
+          <div class="txt-wrap">
+            <h3><span class="maker"><?php the_field( 'ttl' ); ?></span></h3>
+            <p><?php the_field( 'p' ); ?></p>
+          </div>
+        </li>
+      <?php endforeach; ?>
+      <?php endif; wp_reset_postdata(); ?>
+      </ul>
+    </div>
+    <div class="btn_contact">
+      <a href="#sec-11"><img src="<?php echo $wp_url; ?>/lib/images/btn_contact.png" alt="お問い合わせはこちら"></a>
+    </div>
   </div>
 </section>
 
@@ -199,35 +240,136 @@ get_header(); ?>
       <h2 class="ttl-wrap">
         <img src="<?php echo $wp_url; ?>/lib/images/07_ttl.png" alt="3STEPで簡単！速い！">
       </h2>
+      <ul class="flex">
+        <li>
+          <div class="img-wrap">
+            <img src="<?php echo $wp_url; ?>/lib/images/07_flow_01.png" alt="お問い合わせ">
+          </div>
+        </li>
+        <li>
+          <div class="img-wrap">
+            <img src="<?php echo $wp_url; ?>/lib/images/07_flow_02.png" alt="査定金額提示">
+          </div>
+        </li>
+        <li>
+          <div class="img-wrap">
+            <img src="<?php echo $wp_url; ?>/lib/images/07_flow_03.png" alt="買取">
+          </div>
+        </li>
+      </ul>
+      <div class="btn_contact">
+        <a href="#sec-11"><img src="<?php echo $wp_url; ?>/lib/images/btn_contact.png" alt="お問い合わせはこちら"></a>
+      </div>
     </div>
   </div>
 </section>
 
-
-
-
-
-
-
-
-
-<section id="sec-02">
+<section id="sec-08">
   <div class="sec">
     <div class="wrap">
       <h2 class="ttl-wrap">
-        <img src="<?php echo $wp_url; ?>/lib/images/01_ttl.png" alt="SELL+が選ばれる理由">
+        <img src="<?php echo $wp_url; ?>/lib/images/08_ttl.png" alt="よくあるご質問">
       </h2>
+      <div class="table">
+        <?php
+        $arg = array(
+          'posts_per_page' => -1,
+          'orderby' => 'date',
+          'order' => 'DESC',
+          'post_type' => 'faq',
+        );
+        $posts = get_posts($arg);
+        if ($posts): ?>
+        <?php foreach ($posts as $post): setup_postdata($post);
+        ?>
+        <dl class="ac">
+          <dt><?php the_field( 'q' ); ?></dt>
+          <dd><?php the_field( 'a' ); ?></dd>
+        </dl>
+      <?php endforeach; ?>
+      <?php endif; wp_reset_postdata(); ?>
+      </div>
     </div>
   </div>
 </section>
 
+<section id="sec-09">
+  <div class="sec">
+    <div class="wrap">
+      <div class="m-wrap">
+        <h2 class="ttl-wrap">
+          <img src="<?php echo $wp_url; ?>/lib/images/09_ttl.png" alt="SELL+が選ばれる理由">
+        </h2>
+        <p>今までの不動産売却では、お客様の「早く現金化したい」という重要なニーズに対して、「安値で買い取る」というサービスが提供され続けてきました。しかし、これでは肝心な「利益を最大化したい」というお客様のニーズはないがしろにされた状態と言わざるを得ず、言い方を悪く言えば「お客様の足元を見た商売」とも言えるものであったと言えます。<br><br>そこで私たちは、お客様の「早く現金化したい」というニーズと、「利益を最大化したい（最高値で売却したい）」というニーズの両方にお答えするべく生み出したのが、本サービス「SELL+」です。<br><br>お客様のご要望に基づき、まずは査定金額にて最速で現金化していただき、その後我々が当該物件の売却に成功した場合にその利上げをボーナスとしてお客様に還元させて頂きます。<br><br>不動産が不透明なブラックボックスな商売である時代はとっくに終わっていて、これからは本当の意味での「顧客第一主義」、「徹底した透明性」が重要になると考えているからこそ、お客様に我々の利益幅をお見せし、お互いにメリットのある形で利益拡大を図る。まさに私たちとお客様が一蓮托生となるサービスです。
+        </p>
+        <p>SELL+スタッフ</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<section id="sec-02">
+<section id="sec-10">
+  <div class="sec">
+    <div class="wrap">
+      <div class="content">
+        <p>SELL+では下記のエリアの<br class="sp-only">買取を強化中です！</p>
+        <ul class="flex">
+          <?php
+          $arg = array(
+            'posts_per_page' => -1,
+            'orderby' => 'date',
+            'order' => 'DESC',
+            'post_type' => 'faq',
+          );
+          $posts = get_posts($arg);
+          if ($posts): ?>
+          <?php foreach ($posts as $post): setup_postdata($post);
+          ?>
+          <li><?php the_field( 'name' ); ?></li>
+        <?php endforeach; ?>
+        <?php endif; wp_reset_postdata(); ?>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sec-11">
   <div class="sec">
     <div class="wrap">
       <h2 class="ttl-wrap">
-        <img src="<?php echo $wp_url; ?>/lib/images/01_ttl.png" alt="SELL+が選ばれる理由">
+        <img src="<?php echo $wp_url; ?>/lib/images/11_ttl.png" alt="お気軽にご相談ください">
       </h2>
+      <div class="btn-wrap">
+        <div class="img-wrap flex">
+          <a href="#form"><img src="<?php echo $wp_url; ?>/lib/images/11_btn_01.png" alt="フォームで問い合わせる"></a>
+          <a href="#sec-12"><img src="<?php echo $wp_url; ?>/lib/images/11_btn_02.png" alt="LINEで問い合わせる"></a>
+        </div>
+      </div>
+      <div class="form-wrap">
+        <h3><img src="<?php echo $wp_url; ?>/lib/images/11_h3_01.png" alt="お客様情報"></h3>
+        <div id="form">
+
+        </div>
+        <h3><img src="<?php echo $wp_url; ?>/lib/images/11_h3_02.png" alt="物件情報"></h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sec-12">
+  <div class="sec">
+    <div class="wrap">
+      <div class="bg">
+        <div class="flex">
+          <div class="img-wrap">
+            <img src="<?php echo $wp_url; ?>/lib/images/12_line_images.png" alt="買取">
+          </div>
+          <div class="txt-wrap">
+            <a href="#" target="_blank"><img src="<?php echo $wp_url; ?>/lib/images/12_line_txt.png" alt="買取"></a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
