@@ -2,6 +2,10 @@
 $home = esc_url(home_url());
 $wp_url = get_template_directory_uri();
 get_header(); ?>
+<section id="mv">
+  <img class="pc-only" src="<?php echo $wp_url; ?>/lib/images/mv@2x.png" alt="メインビジュアル">
+  <img class="pc-only" src="<?php echo $wp_url; ?>/lib/images/mv_sp@2x.png" alt="メインビジュアル">
+</section>
 <section id="sec-01" class="bg-green">
   <div class="sec">
     <div class="wrap">
@@ -166,9 +170,9 @@ get_header(); ?>
             <div class="txt-wrap">
               <h3><?php the_field( 'ttl' ); ?></h3>
               <h4>
-                売却額<span><?php the_field( 'price_01' ); ?></span>
-                + 利上げボーナス<span><?php the_field( 'price_02' ); ?></span>
-                =<span><?php the_field( 'price_03' ); ?>万円</span>
+                売却額<span><?php the_field( 'price_1' ); ?></span>
+                + 利上げボーナス<span><?php the_field( 'price_2' ); ?></span>
+                =<span><?php the_field( 'price_3' ); ?>万円</span>
               </h4>
               <p><?php the_field( 'p' ); ?></p>
               <table>

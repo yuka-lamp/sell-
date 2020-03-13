@@ -22,7 +22,7 @@ $wp_url = get_template_directory_uri(); ?>
 <body class="drawer drawer--right">
 
 <!-- ヘッダー -->
-<header id="header">
+<header id="header" class="sp-only">
   <div class="logo-wrap">
     <img src="<?php echo $wp_url; ?>/lib/images/logo.svg" alt="SELL+のロゴ">
   </div>
@@ -39,6 +39,33 @@ $wp_url = get_template_directory_uri(); ?>
       <li><a class="drawer-menu-item" href="<?php echo $home; ?>#faq">FAQ<span>よくあるご質問</span></a></li>
       <li><a class="drawer-menu-item" href="<?php echo $home; ?>#message">MESSAGE<span>メッセージ</span></a></li>
       <li><a class="drawer-menu-item" href="<?php echo $home; ?>#flow">FLOW<span>流れ</span></a></li>
+    </ul>
+  </nav>
+  <div class="btn_fix">
+    <a href="<?php echo $home; ?>#form">
+    <img src="<?php echo $wp_url; ?>/lib/images/btn_fix.png" alt="相談する">
+    </a>
+  </div>
+  <div class="btn_top">
+    <a href="<?php echo $home; ?>#header">
+    <img src="<?php echo $wp_url; ?>/lib/images/btn_top.png" alt="トップへ戻る">
+    </a>
+  </div>
+</header>
+
+<header id="header" class="pc-only">
+  <div class="logo-wrap">
+    <img src="<?php echo $wp_url; ?>/lib/images/logo.svg" alt="SELL+のロゴ">
+  </div>
+  <nav class="" role="navigation">
+    <ul class="">
+      <li><a class="drawer-menu-item" href="#about">ABOUT<span>SELL+について</span></a></li>
+      <li><a class="drawer-menu-item" href="#system">SYSTEM<span>仕組み</span></a></li>
+      <li><a class="drawer-menu-item" href="#case">CASE<span>運用事例</span></a></li>
+      <li><a class="drawer-menu-item" href="#voice">VOICE<span>お客様の声</span></a></li>
+      <li><a class="drawer-menu-item" href="#faq">FAQ<span>よくあるご質問</span></a></li>
+      <li><a class="drawer-menu-item" href="#message">MESSAGE<span>メッセージ</span></a></li>
+      <li><a class="drawer-menu-item" href="#flow">FLOW<span>流れ</span></a></li>
     </ul>
   </nav>
   <div class="btn_fix">

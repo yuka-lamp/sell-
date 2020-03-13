@@ -1,7 +1,9 @@
 /*------------------------------------
 header
 ------------------------------------*/
-#header {
+/*--PCヘッダー--*/
+
+#header.pc-only {
   width: 100%;
   margin: 0;
   padding: 0 2rem;
@@ -10,39 +12,87 @@ header
   margin: 1rem 0
 }
 
-#header .logo-wrap {
+#header.pc-only .logo-wrap {
   float: left;
   width: 134px;
   height: 56px
 }
 
-#header .logo-wrap img {
+#header.pc-only .logo-wrap img {
   width: 100%;
 }
 
-#header ul {
+#header.pc-only ul {
   float: right;
-  margin-top: 1.3rem
+  position: relative;
+  display: flex;
+  width: 83%;
 }
 
-#header ul li {
-  display: inline-block;
+#header.pc-only ul li {
   text-align: center;
   font-size: 1.2rem;
   line-height: 1.2rem;
-  padding: 0 1rem;
-  border-right: 1px solid #D1D1D1
+  width: 15%;
+  border-right: 1px solid #D1D1D1;
 }
 
-#header ul li:last-child {
+#header.pc-only ul li:last-child {
   border: none
 }
 
-#header ul li span {
+#header.pc-only ul li span {
   font-size: 13px;
   color: #14A79C;
   display: block;
   font-weight: bold;
+}
+
+/*--スマホヘッダー--*/
+#header.sp-only {
+  width: 100%;
+  margin: 0;
+  padding: 0 2rem;
+  position: fixed;
+  top: 0;
+  margin: 1rem 0
+}
+
+#header.sp-only .logo-wrap {
+  float: left;
+  width: 134px;
+  height: 56px
+}
+
+#header.sp-only .logo-wrap img {
+  width: 100%;
+}
+
+#header.sp-only ul {
+  float: right;
+  position: relative;
+}
+
+#header.sp-only ul li {
+  display: block;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+}
+
+#header.sp-only ul li:last-child {
+  border: none
+}
+
+#header.sp-only ul li span {
+  font-size: 13px;
+  color: #14A79C;
+  display: block;
+  font-weight: bold;
+}
+
+.drawer-nav {
+  z-index: 99
 }
 
 /*---固定ボタン---*/

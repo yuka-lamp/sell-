@@ -42,13 +42,23 @@ span.maker {
 }
 
 /*------------------------------------
+メインビジュアル
+------------------------------------*/
+#mv, #mv img {
+  width: 100%;
+}
+
+#mv {
+  padding-top: 5rem
+}
+/*------------------------------------
 SELL+が選ばれる理由
 ------------------------------------*/
 #sec-01 {}
 
 #sec-01 .content {
   background: #14A79C;
-  padding: 0 7rem;
+  padding: 0 4rem;
   border-radius: 20px;
   box-sizing: border-box;
 }
@@ -554,9 +564,7 @@ SELL+の実績
   padding: 3rem
 }
 
-#sec-11 .form-wrap
-
-@media(max-width:768px) {
+#sec-11 .form-wrap @media(max-width:768px) {
   #sec-11 .btn-wrap {
     width: 100%;
   }
