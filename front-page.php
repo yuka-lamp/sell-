@@ -4,7 +4,7 @@ $wp_url = get_template_directory_uri();
 get_header(); ?>
 <section id="mv">
   <img class="pc-only" src="<?php echo $wp_url; ?>/lib/images/mv@2x.png" alt="メインビジュアル">
-  <img class="pc-only" src="<?php echo $wp_url; ?>/lib/images/mv_sp@2x.png" alt="メインビジュアル">
+  <img class="sp-only" src="<?php echo $wp_url; ?>/lib/images/mv_sp@2x.png" alt="メインビジュアル">
 </section>
 <section id="sec-01" class="bg-green">
   <div class="sec">
@@ -59,11 +59,13 @@ get_header(); ?>
       <div class="img-wrap">
         <img class="sp-only" src="<?php echo $wp_url; ?>/lib/images/02_sp_01@2x.png" alt="今まで当たり前だったのが-01">
         <img class="sp-only" src="<?php echo $wp_url; ?>/lib/images/02_sp_02@2x.png" alt="今まで当たり前だったのが-02">
+        <img class="pc-only" src="<?php echo $wp_url; ?>/lib/images/02_pc_01@2x.png" alt="今まで当たり前だったのが-01">
       </div>
-      <div class="bg-arrow">
+    </div>
+    <div class="bg-arrow mt-3">
+      <div class="wrap">
         <div class="img-wrap">
           <img class="pc-only" src="<?php echo $wp_url; ?>/lib/images/02_pc_02@2x.png" alt="SELL+だったら">
-          <img class="sp-only" src="<?php echo $wp_url; ?>/lib/images/02_sp_02@2x.png" alt="SELL+だったら">
         </div>
       </div>
     </div>
@@ -217,7 +219,13 @@ get_header(); ?>
         ?>
         <li class="flex">
           <div class="img-wrap">
-            <img src="<?php the_field( 'img' ); ?>" alt="<?php the_field( 'ttl' ); ?>">
+            <?php if (post_custom('img')) : ?>
+              <!-- もしthumbnailに画像挿入があったら -->
+            <img src="<?php the_field('img'); ?>" alt="お客様">
+              <!-- thumbnailを取得 -->
+            <?php else : ?>
+              <img src="<?php echo $wp_url; ?>/lib/images/06_user.png" alt="お客様">
+            <?php endif; ?>
             <p><?php the_field( 'name' ); ?></p>
           </div>
           <div class="txt-wrap">
@@ -295,7 +303,7 @@ get_header(); ?>
 </section>
 
 <section id="sec-09">
-  <div class="sec">
+  <div class="sec bg-arrow">
     <div class="wrap">
       <div class="m-wrap">
         <h2 class="ttl-wrap">
@@ -314,21 +322,16 @@ get_header(); ?>
     <div class="wrap">
       <div class="content">
         <p>SELL+では下記のエリアの<br class="sp-only">買取を強化中です！</p>
+
         <ul class="flex">
           <?php
-          $arg = array(
-            'posts_per_page' => -1,
-            'orderby' => 'date',
-            'order' => 'DESC',
-            'post_type' => 'faq',
-          );
-          $posts = get_posts($arg);
-          if ($posts): ?>
-          <?php foreach ($posts as $post): setup_postdata($post);
+          $area = get_field( 'area',39 );
+          $parts = explode(',', $area);
+          foreach ( $parts as $part ) {
+
+              echo '<li>' . $part . '</li>';
+          }
           ?>
-          <li><?php the_field( 'name' ); ?></li>
-        <?php endforeach; ?>
-        <?php endif; wp_reset_postdata(); ?>
         </ul>
       </div>
     </div>
@@ -348,11 +351,7 @@ get_header(); ?>
         </div>
       </div>
       <div class="form-wrap">
-        <h3><img src="<?php echo $wp_url; ?>/lib/images/11_h3_01.png" alt="お客様情報"></h3>
-        <div id="form">
-
-        </div>
-        <h3><img src="<?php echo $wp_url; ?>/lib/images/11_h3_02.png" alt="物件情報"></h3>
+        <?php echo do_shortcode( '[contact-form-7 id="45" title="コンタクトフォーム 1" html_class="h-adr"]' ); ?>
       </div>
     </div>
   </div>
@@ -374,7 +373,5 @@ get_header(); ?>
     </div>
   </div>
 </section>
-
-
 
 <?php get_footer();

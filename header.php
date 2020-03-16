@@ -8,11 +8,12 @@ $wp_url = get_template_directory_uri(); ?>
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="<?php echo $wp_url ?>/lib/css/drawer.min.css">
-<link rel="stylesheet" href="<?php echo $wp_url ?>/lib/css/modal.css">
 <link rel="stylesheet" href="<?php echo $wp_url ?>/lib/css/common.css">
 <link rel="stylesheet" href="<?php echo $wp_url ?>/lib/css/headerfooter.css">
 <link rel="stylesheet" href="<?php echo $wp_url ?>/lib/css/style.css">
 <link rel="stylesheet" href="<?php echo $wp_url ?>/lib/css/readmore.css">
+<link rel="stylesheet" href="<?php echo $wp_url ?>/lib/css/form.css">
+<link rel="stylesheet" href="<?php echo $wp_url ?>/lib/css/modal.css">
 <?php wp_head(); ?>
 <?php if (!is_user_logged_in()): ?>
 <!-- ここにGAトラッキングタグ -->
@@ -43,12 +44,12 @@ $wp_url = get_template_directory_uri(); ?>
     </ul>
   </nav>
   <div class="btn_fix">
-    <a href="#form">
+    <a href="#sec-11">
     <img src="<?php echo $wp_url; ?>/lib/images/btn_fix.png" alt="相談する">
     </a>
   </div>
   <div class="btn_top">
-    <a href="#header">
+    <a href="#mv">
     <img src="<?php echo $wp_url; ?>/lib/images/btn_top.png" alt="トップへ戻る">
     </a>
   </div>
@@ -70,7 +71,7 @@ $wp_url = get_template_directory_uri(); ?>
     </ul>
   </nav>
   <div class="btn_fix">
-    <a href="#form">
+    <a href="#sec-11">
     <img src="<?php echo $wp_url; ?>/lib/images/btn_fix.png" alt="相談する">
     </a>
   </div>

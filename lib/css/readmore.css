@@ -16,7 +16,12 @@ SELL+の実績 「続きを読む」
   left: 20%;
 }
 
-@media(max-width:768px) {
+#sec-05 ul li:nth-child(2) .grad-trigger {
+  left: auto;
+  right: 20%
+}
+
+@media(max-width:1080px) {
   .grad-trigger {
     display: block;
     text-align: center;

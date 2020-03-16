@@ -20,8 +20,6 @@ $wp_url = get_template_directory_uri(); ?>
               <a class="js-modal-close mt-1" href="">✕</a>
             </div>
           </div>
-          <a class="drawer-menu-item" href="<?php echo $home; ?>">
-          </a>
         </li>
       </ul>
       <small class="d-block">Copyright© GARNET Co., Ltd. All Rights Reserved.</small>

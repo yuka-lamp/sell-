@@ -50,7 +50,7 @@ ul {
 }
 
 ul li a {
-  color: #000!important
+  color: #000
 }
 
 ul li a:hover img {
@@ -109,17 +109,7 @@ div.img-wrap>img {
 @media(max-width:768px) {
 
   /*--スマホよこ--*/
-  .sp-only {
-    display: block !important;
-  }
 
-  .pc-only {
-    display: none !important;
-  }
-
-  .flex {
-    flex-wrap: wrap!important;
-  }
   .sec {
     padding: 30px 0!important
   }
@@ -136,6 +126,17 @@ div.img-wrap>img {
   main {
     width: 100%;
     margin: 0
+  }
+  .sp-only {
+    display: block !important;
+  }
+
+  .pc-only {
+    display: none !important;
+  }
+
+  .flex {
+    flex-wrap: wrap!important;
   }
 }
 
@@ -439,6 +440,11 @@ div.img-wrap>img {
 .gray {
   color: #8F8F8F;
   line-height: 1.5rem;
+}
+
+.bg-arrow{
+  background: url('../images/bg_arrow.png');
+  background-repeat: repeat;
 }
 
 /*------------------------------------------------------

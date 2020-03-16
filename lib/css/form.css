@@ -1,0 +1,126 @@
+/*------------------------------------
+お問い合わせフォーム
+------------------------------------*/
+.form-wrap h3 {
+  margin: 1rem 0 2rem 0;
+  text-align: center;
+}
+
+.form-wrap .flex {
+  background: #E1F0E1;
+  padding: 15px;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.form-wrap .flex dd {
+  width: 30%;
+  font-weight: bold;
+  color: #14A79C;
+  margin: 0
+}
+
+.form-wrap .flex dt {
+  width: 70%;
+  text-align: left;
+}
+
+.form-wrap .flex:first-child dt {
+  display: flex;
+}
+
+.form-wrap .flex:first-child dt span {
+  width: 49%;
+}
+
+.form-wrap .flex dt input, .form-wrap .flex dt textarea {
+  width: 100%;
+  padding: 3px
+}
+
+.form-wrap .flex dt.num input {
+  width: 110px;
+  margin-right: 10px
+}
+
+.form-wrap .flex dt .wpcf7-list-item {
+  display: flex;
+}
+
+.form-wrap .flex dt .wpcf7-list-item input:first-child {
+  width: 20px;
+  margin: 0 1rem 0 0
+}
+
+.form-wrap .modal-content {
+  border: none
+}
+
+.form-wrap .txt-c {
+  text-align: center;
+}
+
+.form-wrap .txt-c>span label {
+  display: flex;
+  margin-top: 2rem
+}
+
+.form-wrap .wpcf7-radio  {
+  display: flex;
+}
+
+.form-wrap .txt-c>span .modal-content {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+}
+
+.form-wrap .txt-c>span .modal-content a {
+  color: #333;
+  text-decoration: underline;
+  margin-left: 1rem
+}
+
+.form-wrap .txt-c>span .modal-content p {
+  font-size: 1rem
+}
+
+.form-wrap [type="submit"] {
+  width: 290px;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: #FCF76A;
+  border: 3px solid #333;
+  border-radius: 100px;
+  margin: 0 auto;
+}
+
+.form-wrap .wpcf7-form>p {
+  text-align: center;
+}
+
+@media(max-width:1080px) {
+  .grad-trigger {
+    display: block;
+    text-align: center;
+    width: 100%;
+    left: 0;
+  }
+  #sec-11 .form-wrap {
+    padding: 15px
+  }
+  .form-wrap .flex dd {
+    width: 100%;
+  }
+
+  .form-wrap .flex dt {
+    width: 100%;
+  }
+  .form-wrap .txt-c>span .modal-content p {
+    margin: 0
+  }
+  .form-wrap .flex:first-child dt input {
+    width: 48%
+  }
+}

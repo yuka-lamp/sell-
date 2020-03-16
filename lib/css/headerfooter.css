@@ -3,6 +3,10 @@ header
 ------------------------------------*/
 /*--PCヘッダー--*/
 #header.pc-only {
+  display: block !important;
+}
+
+#header.pc-only {
   width: 100%;
   margin: 0;
   padding: 0 2rem;
@@ -49,7 +53,17 @@ header
   font-weight: bold;
 }
 
+@media(max-width:1080px) {
+  #header.pc-only {
+    display: none !important;
+  }
+}
+
 /*--スマホヘッダー--*/
+#header.sp-only {
+  display: none !important;
+}
+
 #header.sp-only {
   width: 100%;
   padding: .5rem 1rem;
@@ -118,7 +132,13 @@ header
   z-index: 80
 }
 
-@media(max-width:768px) {
+@media(max-width:1080px) {
+  #header.sp-only {
+    display: block !important;
+  }
+}
+
+@media(max-width:1080px) {
   #header .btn_fix {
     width: 60px
   }
@@ -151,11 +171,12 @@ footer
   padding: 3rem 0
 }
 
-#footer ul li {
+#footer ul li a {
   display: inline-block;
+  color: #fff
 }
 
-#footer ul li a {
+#footer ul li a.js-modal-open {
   padding: 0;
   display: block;
   margin: 0 10px;
