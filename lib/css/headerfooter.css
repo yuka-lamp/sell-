@@ -2,14 +2,15 @@
 header
 ------------------------------------*/
 /*--PCヘッダー--*/
-
 #header.pc-only {
   width: 100%;
   margin: 0;
   padding: 0 2rem;
   position: fixed;
   top: 0;
-  margin: 1rem 0
+  margin: 1rem 0;
+  background: #FFF;
+  z-index: 99
 }
 
 #header.pc-only .logo-wrap {
@@ -51,11 +52,12 @@ header
 /*--スマホヘッダー--*/
 #header.sp-only {
   width: 100%;
-  margin: 0;
-  padding: 0 2rem;
+  padding: .5rem 1rem;
   position: fixed;
   top: 0;
-  margin: 1rem 0
+  z-index: 99;
+  background: #fff;
+  height: 60px;
 }
 
 #header.sp-only .logo-wrap {
@@ -68,8 +70,11 @@ header
   width: 100%;
 }
 
+#header.sp-only nav {
+  padding: 1rem 0 0 0
+}
+
 #header.sp-only ul {
-  float: right;
   position: relative;
 }
 
@@ -96,7 +101,6 @@ header
 }
 
 /*---固定ボタン---*/
-
 #header .btn_fix {
   position: fixed;
   right: 0;
@@ -110,17 +114,22 @@ header
 }
 
 #header .btn_fix img, #header .btn_top img {
-  width: 100%
+  width: 100%;
+  z-index: 80
 }
 
 @media(max-width:768px) {
   #header .btn_fix {
     width: 60px
   }
+
+  #header.sp-only .logo-wrap {
+    width: 104px;
+    height: 43px;
+  }
 }
 
 /*---ハンバーガーメニュー---*/
-
 .drawer-hamburger-icon, .drawer-hamburger-icon:after, .drawer-hamburger-icon:before {
   background-color: #fff;
 }
@@ -142,7 +151,7 @@ footer
   padding: 3rem 0
 }
 
-#footer ul li  {
+#footer ul li {
   display: inline-block;
 }
 
@@ -150,7 +159,7 @@ footer
   padding: 0;
   display: block;
   margin: 0 10px;
-  color: #fff!important
+  color: #fff !important
 }
 
 #footer small {

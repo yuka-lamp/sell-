@@ -57,15 +57,10 @@ get_header(); ?>
         <img src="<?php echo $wp_url; ?>/lib/images/02_ttl.png" alt="買取+利上げボーナス">
       </h2>
       <div class="img-wrap">
-        <img class="pc-only" src="<?php echo $wp_url; ?>/lib/images/02_pc_01@2x.png" alt="今まで当たり前だったのが">
-        <img class="sp-only" src="<?php echo $wp_url; ?>/lib/images/02_sp_01-1@2x.png" alt="今まで当たり前だったのが-01">
-        <img class="sp-only" src="<?php echo $wp_url; ?>/lib/images/02_sp_01-2@2x.png" alt="今まで当たり前だったのが-02">
+        <img class="sp-only" src="<?php echo $wp_url; ?>/lib/images/02_sp_01@2x.png" alt="今まで当たり前だったのが-01">
+        <img class="sp-only" src="<?php echo $wp_url; ?>/lib/images/02_sp_02@2x.png" alt="今まで当たり前だったのが-02">
       </div>
-    </div>
-  </div>
-  <div class="bg-arrow">
-    <div class="sec">
-      <div class="wrap">
+      <div class="bg-arrow">
         <div class="img-wrap">
           <img class="pc-only" src="<?php echo $wp_url; ?>/lib/images/02_pc_02@2x.png" alt="SELL+だったら">
           <img class="sp-only" src="<?php echo $wp_url; ?>/lib/images/02_sp_02@2x.png" alt="SELL+だったら">
@@ -151,61 +146,6 @@ get_header(); ?>
       <h2 class="ttl-wrap">
         <img src="<?php echo $wp_url; ?>/lib/images/05_ttl.png" alt="SELL+の実績">
       </h2>
-    </div>
-    <ul>
-      <?php
-      $arg = array(
-        'posts_per_page' => 3,
-        'orderby' => 'date',
-        'order' => 'DESC',
-        'post_type' => 'case',
-      );
-      $posts = get_posts($arg);
-      if ($posts): ?>
-      <?php foreach ($posts as $post): setup_postdata($post);
-      ?>
-      <li class="grad-wrap">
-        <span class="grad-trigger"></span>
-          <div class="grad-item flex">
-            <div class="txt-wrap">
-              <h3><?php the_field( 'ttl' ); ?></h3>
-              <h4>
-                売却額<span><?php the_field( 'price_1' ); ?></span>
-                + 利上げボーナス<span><?php the_field( 'price_2' ); ?></span>
-                =<span><?php the_field( 'price_3' ); ?>万円</span>
-              </h4>
-              <p><?php the_field( 'p' ); ?></p>
-              <table>
-                <dl>
-                  <dt>物件の種類</dt>
-                  <dd><?php the_field( 'type' ); ?></dd>
-                </dl>
-                <dl>
-                  <dt>物件の種類</dt>
-                  <dd><?php the_field( 'size' ); ?></dd>
-                </dl>
-              </table>
-            </div>
-            <div class="img-wrap">
-              <img src="<?php the_field( 'img' ); ?>" alt="<?php the_field( 'ttl' ); ?>">
-            </div>
-          </div>
-      </li>
-    <?php endforeach; ?>
-    <?php endif; wp_reset_postdata(); ?>
-    </ul>
-    <div class="btn_contact">
-      <a href="#sec-11"><img src="<?php echo $wp_url; ?>/lib/images/btn_contact.png" alt="お問い合わせはこちら"></a>
-    </div>
-  </div>
-</section>
-
-<section id="sec-06">
-  <div class="sec">
-    <div class="wrap">
-      <h2 class="ttl-wrap">
-        <img src="<?php echo $wp_url; ?>/lib/images/07_ttl.png" alt="お客様の声">
-      </h2>
       <ul>
         <?php
         $arg = array(
@@ -219,6 +159,63 @@ get_header(); ?>
         <?php foreach ($posts as $post): setup_postdata($post);
         ?>
         <li>
+          <div class="grad-wrap">
+            <div class="img-wrap">
+              <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_field( 'ttl' ); ?>">
+            </div>
+            <span class="grad-trigger"></span>
+              <div class="grad-item">
+                <div class="txt-wrap">
+                  <h3><?php the_field( 'ttl' ); ?></h3>
+                  <h4>
+                    売却額<span><?php the_field( 'price_1' ); ?></span>万円
+                    + 利上げボーナス<span><?php the_field( 'price_2' ); ?></span>万円
+                    = <span class="maker"><?php the_field( 'price_3' ); ?></span>万円
+                  </h4>
+                  <p><?php the_field( 'p' ); ?></p>
+                  <table>
+                    <dl>
+                      <dt>物件の種類</dt>
+                      <dd><?php the_field( 'type' ); ?></dd>
+                    </dl>
+                    <dl>
+                      <dt>物件の種類</dt>
+                      <dd><?php the_field( 'size' ); ?></dd>
+                    </dl>
+                  </table>
+                </div>
+              </div>
+            </div>
+        </li>
+      <?php endforeach; ?>
+      <?php endif; wp_reset_postdata(); ?>
+      </ul>
+      <div class="btn_contact">
+        <a href="#sec-11"><img src="<?php echo $wp_url; ?>/lib/images/btn_contact.png" alt="お問い合わせはこちら"></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sec-06">
+  <div class="sec">
+    <div class="wrap">
+      <h2 class="ttl-wrap">
+        <img src="<?php echo $wp_url; ?>/lib/images/06_ttl.png" alt="お客様の声">
+      </h2>
+      <ul>
+        <?php
+        $arg = array(
+          'posts_per_page' => 3,
+          'orderby' => 'date',
+          'order' => 'DESC',
+          'post_type' => 'voice',
+        );
+        $posts = get_posts($arg);
+        if ($posts): ?>
+        <?php foreach ($posts as $post): setup_postdata($post);
+        ?>
+        <li class="flex">
           <div class="img-wrap">
             <img src="<?php the_field( 'img' ); ?>" alt="<?php the_field( 'ttl' ); ?>">
             <p><?php the_field( 'name' ); ?></p>
@@ -346,8 +343,8 @@ get_header(); ?>
       </h2>
       <div class="btn-wrap">
         <div class="img-wrap flex">
-          <a href="#form"><img src="<?php echo $wp_url; ?>/lib/images/11_btn_01.png" alt="フォームで問い合わせる"></a>
-          <a href="#sec-12"><img src="<?php echo $wp_url; ?>/lib/images/11_btn_02.png" alt="LINEで問い合わせる"></a>
+          <a href="#form"><img src="<?php echo $wp_url; ?>/lib/images/11_btn_01@2x.png" alt="フォームで問い合わせる"></a>
+          <a href="#sec-12"><img src="<?php echo $wp_url; ?>/lib/images/11_btn_02@2x.png" alt="LINEで問い合わせる"></a>
         </div>
       </div>
       <div class="form-wrap">

@@ -32,22 +32,23 @@ $wp_url = get_template_directory_uri(); ?>
   </button>
   <nav class="drawer-nav" role="navigation">
     <ul class="drawer-menu">
-      <li><a class="drawer-menu-item" href="<?php echo $home; ?>#about">ABOUT<span>SELL+について</span></a></li>
-      <li><a class="drawer-menu-item" href="<?php echo $home; ?>#system">SYSTEM<span>仕組み</span></a></li>
-      <li><a class="drawer-menu-item" href="<?php echo $home; ?>#case">CASE<span>運用事例</span></a></li>
-      <li><a class="drawer-menu-item" href="<?php echo $home; ?>#voice">VOICE<span>お客様の声</span></a></li>
-      <li><a class="drawer-menu-item" href="<?php echo $home; ?>#faq">FAQ<span>よくあるご質問</span></a></li>
-      <li><a class="drawer-menu-item" href="<?php echo $home; ?>#message">MESSAGE<span>メッセージ</span></a></li>
-      <li><a class="drawer-menu-item" href="<?php echo $home; ?>#flow">FLOW<span>流れ</span></a></li>
+      <li><a class="drawer-menu-item" href="#sec-01">ABOUT<span>SELL+について</span></a></li>
+      <li><a class="drawer-menu-item" href="#sec-02">SYSTEM<span>仕組み</span></a></li>
+      <li><a class="drawer-menu-item" href="#sec-05">CASE<span>運用事例</span></a></li>
+      <li><a class="drawer-menu-item" href="#sec-06">VOICE<span>お客様の声</span></a></li>
+      <li><a class="drawer-menu-item" href="#sec-07">FLOW<span>流れ</span></a></li>
+      <li><a class="drawer-menu-item" href="#sec-08">FAQ<span>よくあるご質問</span></a></li>
+      <li><a class="drawer-menu-item" href="#sec-09">MESSAGE<span>メッセージ</span></a></li>
+      <li><a class="drawer-menu-item" href="#sec-0"><img src="<?php echo $wp_url; ?>/lib/images/btn_header.png" alt="お問い合わせ"></a></li>
     </ul>
   </nav>
   <div class="btn_fix">
-    <a href="<?php echo $home; ?>#form">
+    <a href="#form">
     <img src="<?php echo $wp_url; ?>/lib/images/btn_fix.png" alt="相談する">
     </a>
   </div>
   <div class="btn_top">
-    <a href="<?php echo $home; ?>#header">
+    <a href="#header">
     <img src="<?php echo $wp_url; ?>/lib/images/btn_top.png" alt="トップへ戻る">
     </a>
   </div>
@@ -59,22 +60,22 @@ $wp_url = get_template_directory_uri(); ?>
   </div>
   <nav class="" role="navigation">
     <ul class="">
-      <li><a class="drawer-menu-item" href="#about">ABOUT<span>SELL+について</span></a></li>
-      <li><a class="drawer-menu-item" href="#system">SYSTEM<span>仕組み</span></a></li>
-      <li><a class="drawer-menu-item" href="#case">CASE<span>運用事例</span></a></li>
-      <li><a class="drawer-menu-item" href="#voice">VOICE<span>お客様の声</span></a></li>
-      <li><a class="drawer-menu-item" href="#faq">FAQ<span>よくあるご質問</span></a></li>
-      <li><a class="drawer-menu-item" href="#message">MESSAGE<span>メッセージ</span></a></li>
-      <li><a class="drawer-menu-item" href="#flow">FLOW<span>流れ</span></a></li>
+      <li><a class="drawer-menu-item" href="#sec-01">ABOUT<span>SELL+について</span></a></li>
+      <li><a class="drawer-menu-item" href="#sec-02">SYSTEM<span>仕組み</span></a></li>
+      <li><a class="drawer-menu-item" href="#sec-05">CASE<span>運用事例</span></a></li>
+      <li><a class="drawer-menu-item" href="#sec-06">VOICE<span>お客様の声</span></a></li>
+      <li><a class="drawer-menu-item" href="#sec-07">FLOW<span>流れ</span></a></li>
+      <li><a class="drawer-menu-item" href="#sec-08">FAQ<span>よくあるご質問</span></a></li>
+      <li><a class="drawer-menu-item" href="#sec-09">MESSAGE<span>メッセージ</span></a></li>
     </ul>
   </nav>
   <div class="btn_fix">
-    <a href="<?php echo $home; ?>#form">
+    <a href="#form">
     <img src="<?php echo $wp_url; ?>/lib/images/btn_fix.png" alt="相談する">
     </a>
   </div>
   <div class="btn_top">
-    <a href="<?php echo $home; ?>#header">
+    <a href="#header">
     <img src="<?php echo $wp_url; ?>/lib/images/btn_top.png" alt="トップへ戻る">
     </a>
   </div>
